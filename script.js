@@ -8,13 +8,13 @@ let number1 = Math.trunc(Math.random() * 20) + 1;
 document.querySelector('.number').textContent = number1;
 
 document.querySelector('.check').addEventListener('click', function () {
-  const guess1 = document.querySelector('.guess').value;
+  const guess1 = Number(document.querySelector('.guess').value);
 
   if (!guess1) {
     document.querySelector('.message').textContent = 'No Number';
   } else if (guess1 === number1) {
     document.querySelector('.message').textContent = 'Correct Number🎉';
-    document.querySelector('.body').style.backgroundColor = '#60b347';
+    document.querySelector('body').style.backgroundColor = '#60b347';
 
     if (score > highscore) {
       highscore = score;
